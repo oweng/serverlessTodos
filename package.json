@@ -33,6 +33,8 @@
     "clean": "rm -rf node_modules && rm -rf src/node_modules",
     "deploy": "./node_modules/.bin/serverless deploy | tee .build/deploy.out",
     "deploy:cicd": "./node_modules/.bin/serverless deploy --stage cicd | tee .build/deploy.out",
+    "deploy:cert": "./node_modules/.bin/serverless deploy --stage cert | tee .build/deploy.out",
+    "deploy:prod": "./node_modules/.bin/serverless deploy --stage prod | tee .build/deploy.out",
     "predeploy": "mkdir -p .build",
     "predeploy:cicd": "npm run predeploy",
     "install:lambda": "cd src; npm install; cd ..",
