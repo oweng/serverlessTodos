@@ -37,6 +37,8 @@
     "deploy:prod": "./node_modules/.bin/serverless deploy --stage prod | tee .build/deploy.out",
     "predeploy": "mkdir -p .build",
     "predeploy:cicd": "npm run predeploy",
+    "predeploy:cert": "npm run predeploy",
+    "predeploy:prod": "npm run predeploy",
     "install:lambda": "cd src; npm install; cd ..",
     "install": "npm run install:lambda"
   }
